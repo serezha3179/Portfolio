@@ -1,0 +1,359 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/latoregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/latosemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/latobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/latoheavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+  background: #F9F9F9;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .header {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+.header__logo-link {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FEB11E;
+}
+@media screen and (max-width: 1024px) {
+  .header__logo-link {
+    font-size: 16px;
+  }
+}
+.header__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.header__img {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 992px) {
+  .header__nav {
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: -100%;
+    transition: left 0.3s;
+    background: #000000;
+  }
+}
+@media screen and (max-width: 992px) {
+  .active .header__nav {
+    left: 0;
+  }
+}
+.header__nav-items {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .header__nav-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.header__nav-item {
+  margin: 0 20px;
+}
+@media screen and (max-width: 992px) {
+  .header__nav-item {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-height: 300px) and (orientation: landscape) {
+  .header__nav-item {
+    margin: 10px 0;
+  }
+}
+.header__nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #777777;
+}
+@media screen and (max-width: 992px) {
+  .header__nav-link {
+    color: #ffffff;
+  }
+}
+.header__nav-link:hover {
+  color: #FEB11E;
+}
+.header__burger {
+  position: relative;
+  display: none;
+  align-items: center;
+  width: 35px;
+  height: 25px;
+  transition: 0.3s linear;
+}
+@media screen and (max-width: 992px) {
+  .header__burger {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__burger {
+    width: 25px;
+    height: 16px;
+  }
+}
+.header__burger::before, .header__burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #777777;
+  transition: 0.1s linear 0.15s;
+}
+@media screen and (max-width: 1024px) {
+  .header__burger::before, .header__burger::after {
+    height: 2px;
+  }
+}
+.header__burger::before {
+  top: 0;
+}
+.header__burger::after {
+  bottom: 0;
+}
+.header__burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #777777;
+  transition-delay: 0.2s;
+}
+@media screen and (max-width: 1024px) {
+  .header__burger span {
+    height: 2px;
+  }
+}
+.header__burger.active {
+  transform: rotate(360deg);
+  transition: 0.3s;
+}
+.header__burger.active span {
+  width: 0;
+  transition: 0.2s linear;
+}
+.header__burger.active::before, .header__burger.active::after {
+  background: #ffffff;
+  transition: linear 0s;
+}
+.header__burger.active::before {
+  transform: translate(1px, 11px) rotate(-45deg);
+}
+@media screen and (max-width: 1024px), (orientation: landscape) {
+  .header__burger.active::before {
+    transform: translate(0px, 7px) rotate(-45deg);
+  }
+}
+.header__burger.active::after {
+  transform: translate(0px, -11px) rotate(45deg);
+}
+@media screen and (max-width: 1024px), (orientation: landscape) {
+  .header__burger.active::after {
+    transform: translate(0px, -7px) rotate(45deg);
+  }
+}
+
+body {
+  font-family: "lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #777777;
+  height: 2000px;
+}
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.hero {
+  padding: 15% 0 18%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero/hero_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    background-position: 60% 0%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 100px 10px;
+    padding: 20% 0 10%;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .hero {
+    padding: 15% 0 10%;
+  }
+}
+.hero__title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: #ffffff;
+}
+@media screen and (max-width: 900px) {
+  .hero__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__title {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+}
+.hero__title span {
+  display: block;
+}
+.hero__title span:last-child {
+  color: #FEB11E;
+}
+.hero__text {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #B1B1B1;
+}
+@media screen and (max-width: 900px) {
+  .hero__text {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+}
+.hero__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__social-link {
+  margin: 0 20px;
+  padding: 7px;
+  border: 0.5px solid white;
+}
+@media screen and (max-width: 600px) {
+  .hero__social-link {
+    margin: 0 10px;
+  }
+}
+.hero__social-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+.hero__social-svg:last-child {
+  width: 25px;
+  height: 25px;
+}
+/*# sourceMappingURL=../sourcemaps/style.css.map */

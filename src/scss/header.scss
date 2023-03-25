@@ -1,0 +1,182 @@
+// @import 'variables.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 0;
+    background: #F9F9F9;
+
+    @media screen and (max-width: 992px) and (orientation:landscape) {
+        padding: 10px 0;
+    };
+
+    @media screen and (max-width: $Medium-l) {
+        padding: 10px 0;
+    };
+
+    &__logo-link {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 800;
+        color: $yellow;
+
+        @media screen and (max-width: $Medium-l) {
+            font-size: 16px;
+        };
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    &__img {
+        width: 100px;
+        height: 100px;
+    }
+    &__nav {
+        @media screen and (max-width: 992px) {
+            display: block;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: -100%;
+            transition: left .3s;
+            background: $black;
+        };
+    }
+    .active &__nav {
+        @media screen and (max-width: 992px) {
+            left: 0;
+        };
+    }
+
+    &__nav-items {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        };
+    }
+
+    &__nav-item {
+        margin: 0 20px;
+        @media screen and (max-width: 992px) {
+            margin: 20px 0;
+        };
+
+        @media screen and (max-height: 300px) and (orientation: landscape) {
+            margin: 10px 0;
+        };
+    }
+
+    &__nav-link {
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $grey; 
+
+        @media screen and (max-width: 992px) {
+            color: $white;
+        };
+    }
+
+    &__nav-link:hover {
+        color: $yellow;
+    }
+
+    &__burger {
+        position: relative;
+        display: none;
+        align-items: center;
+        width: 35px;
+        height: 25px;
+        transition: 0.3s linear;
+
+        @media screen and (max-width: 992px) {
+            display: flex;
+        };
+
+        @media screen and (max-width: $Medium-l) {
+            width: 25px;
+            height: 16px;
+        };
+
+        &::before,&::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: $grey;
+            transition: 0.1s linear 0.15s;
+
+            @media screen and (max-width: $Medium-l) {
+                height: 2px;
+            };
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+        
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $grey;
+            transition-delay: 0.2s;
+
+            @media screen and (max-width: $Medium-l) {
+                height: 2px;
+            };
+        }
+
+        &.active {
+            transform: rotate(360deg);
+            transition: 0.3s;
+            span {
+                width: 0;
+                transition: 0.2s linear;
+            }
+
+            &::before,&::after {
+                background: $white;
+                transition: linear 0s;
+            }
+
+            &::before {
+                transform: translate(1px, 11px) rotate(-45deg);
+
+                @media screen and (max-width: $Medium-l), (orientation: landscape) {
+                    transform: translate(0px, 7px) rotate(-45deg);
+                };
+            }
+
+            &::after {
+                transform: translate(0px, -11px) rotate(45deg);
+
+                @media screen and (max-width: $Medium-l), (orientation: landscape) {
+                    transform: translate(0px, -7px) rotate(45deg);
+                };
+            }
+        }
+    }
+}
+
+
+

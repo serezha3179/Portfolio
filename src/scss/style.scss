@@ -1,0 +1,115 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+body {
+    font-family: 'lato';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $grey;
+    height: 2000px;
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.hero {
+    padding: 15% 0 18%;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(../img/hero/hero_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 992px) {
+        background-position: 60% 0%;
+    };
+
+    @media screen and (max-width: $Small-l) {
+        padding: 100px 10px;
+        padding: 20% 0 10%;
+    };
+
+    @media screen and (max-width: $Small-l) and (orientation: landscape) {
+        padding: 15% 0 10%;
+    };
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 30px;
+        color: $white;
+
+        @media screen and (max-width: $Medium) {
+            font-size: 20px;
+            margin-bottom: 30px;
+        };
+
+        @media screen and (max-width: $Small-l) {
+            font-size: 18px;
+            margin-bottom: 25px;
+        };
+
+        span {
+            display: block;
+        }
+
+        span:last-child {
+            color: $yellow;
+        };
+    }
+
+    &__text {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        color: $ligthgrey;
+
+        @media screen and (max-width: $Medium) {
+            max-width: 400px;
+        };
+
+        @media screen and (max-width: $Small-l) {
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        };
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__social-link {
+        margin: 0 20px;
+        padding: 7px;
+        border: 0.5px solid white;
+
+        @media screen and (max-width: $Small-l) {
+            margin: 0 10px;
+        };
+    }
+
+    &__social-svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        fill: $white;
+
+        &:last-child {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

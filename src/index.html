@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{"title":"Portfolio"})
+  <body>
+      @@include('html/header.html')
+      <main class="main">
+        <!-- <div class="container"> -->
+           <section class="hero">
+            <div class="container">
+              <h1 class="hero__title">Здравствуйте,
+                <span>меня зовут Сергей.</span>
+                <span>Я Frontend разработчик</span></h1>
+              <div class="hero__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos odio voluptatem consectetur consequuntur ratione eos. Tempora nam itaque debitis perspiciatis. Quis possimus vitae veniam repudiandae. Excepturi fugit quis explicabo voluptate.</div>
+              <div class="hero__social">
+                <a href="https://github.com/" class="hero__social-link">
+                  <svg class="hero__social-svg">
+                    <use xlink:href="@img/sprite.svg#github"></use>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/" class="hero__social-link">
+                  <svg class="hero__social-svg">
+                    <use xlink:href="@img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/" class="hero__social-link">
+                  <svg class="hero__social-svg">
+                    <use xlink:href="@img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/" class="hero__social-link">
+                  <svg class="hero__social-svg">
+                    <use xlink:href="@img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+           </section>
+        <!-- </div> -->
+      </main>
+      @@include('html/footer.html')
+      <script src="js/app.min.js"></script>
+  </body>
+</html>
