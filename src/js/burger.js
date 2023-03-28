@@ -1,11 +1,11 @@
-if(document.querySelector('.header__burger')) {
+if(document.querySelector('.js-header__burger')) {
     const body = document.querySelector('body');
-    const header = document.querySelector('.header');
-    const bureger = document.querySelector('.header__burger');
+    const header = document.querySelector('.js-header');
+    const burger = document.querySelector('.js-header__burger');
 
-    bureger.addEventListener('click', () => {
-        bureger.classList.toggle('active');
-        header.classList.toggle('active');
-        body.classList.toggle('lock');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        header.classList.toggle('is-active');
+        body.classList.toggle('is-lock');
     })
 }

@@ -51,7 +51,7 @@
             background: $black;
         };
     }
-    .active &__nav {
+    .is-active &__nav {
         @media screen and (max-width: 992px) {
             left: 0;
         };
@@ -71,9 +71,20 @@
 
     &__nav-item {
         margin: 0 20px;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $grey; 
+        // cursor: pointer;
+        
         @media screen and (max-width: 992px) {
             margin: 20px 0;
+            // color: $white;
         };
+
+        &:hover {
+            // color: $yellow;
+        }
 
         @media screen and (max-height: 300px) and (orientation: landscape) {
             margin: 10px 0;
@@ -84,7 +95,11 @@
         font-size: 15px;
         font-weight: 600;
         text-transform: uppercase;
-        color: $grey; 
+        color: $grey;
+        
+        &.is-active {
+            // color: $yellow;
+        }
 
         @media screen and (max-width: 992px) {
             color: $white;
@@ -146,7 +161,7 @@
             };
         }
 
-        &.active {
+        &.is-active {
             transform: rotate(360deg);
             transition: 0.3s;
             span {
