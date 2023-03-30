@@ -1,7 +1,7 @@
 import * as flsFunctions from './modules/functions.js';
 
-import './jquery-3.6.1.min.js';
-import './slick.min.js';
+// import './jquery-3.6.1.min.js';
+// import './slick.min.js';
 // import './slider.js';
 import './burger.js';
 import './header-nav.js';
