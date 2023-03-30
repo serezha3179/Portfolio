@@ -12,12 +12,12 @@
     <div class="container">
         <div class="header__items">
             <div class="header__logo">
-                <a href="index.html" class="header__logo-link"><span> < </span>folio<span> /> </span></a>
+                <a href="index.html" class="header__logo-link"><span>< </span>Folio<span> /></span></a>
             </div>
             <nav class="header__nav">
                 <ul class="header__nav-items">
                     <li class="header__nav-item">
-                        <a href="#home" class="header__nav-link" data-attribute="home" style = "color: #FEB11E;">
+                        <a href="#home" class="header__nav-link is-active" data-attribute="home">
                             Home
                         </a>
                     </li>
@@ -26,11 +26,11 @@
                             About me
                         </a>
                     </li>
-                    <li class="header__nav-item">
+                    <!-- <li class="header__nav-item">
                         <a href="#skills" class="header__nav-link" data-attribute="skills">
                             Skills
                         </a>
-                    </li>
+                    </li> -->
                     <li class="header__nav-item">
                         <a href="#projects" class="header__nav-link" data-attribute="projects">
                             Projects
@@ -52,9 +52,8 @@
       <main class="main">
            <section class="hero" id="home">
             <div class="container">
-              <h1 class="hero__title">Здравствуйте,
-                <span>меня зовут Сергей.</span>
-                <span>Я Frontend разработчик</span></h1>
+              <h1 class="hero__title">Hello, I am Sergei
+                <span>Frontend developer</span></h1>
               <div class="hero__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos odio voluptatem consectetur consequuntur ratione eos. Tempora nam itaque debitis perspiciatis. Quis possimus vitae veniam repudiandae. Excepturi fugit quis explicabo voluptate.</div>
               <div class="hero__social social ">
                 <a href="https://github.com/serezha3179" class="social__link">
@@ -62,21 +61,11 @@
                     <use xlink:href="img/sprite.svg#github"></use>
                   </svg>
                 </a>
-                <!-- <a href="https://twitter.com/" class="social__link">
-                  <svg class="social__svg">
-                    <use xlink:href="img/sprite.svg#twitter"></use>
-                  </svg>
-                </a> -->
                 <a href="https://facebook.com/" class="social__link">
                   <svg class="social__svg">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
-                <!-- <a href="https://instagram.com/" class="social__link">
-                  <svg class="social__svg">
-                    <use xlink:href="img/sprite.svg#instagram"></use>
-                  </svg>
-                </a> -->
                 <a href="https://www.linkedin.com/in/сергей-абрамкин-aa2293263" 
                 class="social__link">
                   <svg class="social__svg">
@@ -88,43 +77,31 @@
            </section>
            <section class="about" id="about">
             <div class="container">
-              <h2 class="about__title">Who am I</h2>
-              <div class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+              <h2 class="about__title">About me</h2>
+              <div class="about__text">Here you will find more information about me and my current skills </div>
               <div class="about__items">
                 <div class="about__item">
-                  <img src="img/about/photo2.jpg" alt="" class="about__image">
+                  <h2 class="about__item-title">I Design Awesome Web Apps</h2>
+                  <div class="about__item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint incidunt natus iure soluta perspiciatis repudiandae vel sapiente quam suscipit? Laudantium temporibus possimus sunt, dignissimos laborum consequatur placeat vel ea explicabo!
+                    Ratione reiciendis beatae aspernatur illo voluptates sapiente animi. Iste ipsa asperiores nemo ducimus beatae a ab magnam sit alias, unde adipisci molestias mollitia dicta in quibusdam nulla obcaecati tempora cumque!
+                  </div>
                 </div>
                 <div class="about__item">
-                  <h2 class="about__item-title">I Design Awesome Web Apps</h2>
-                  <p class="about__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nobis neque reprehenderit? Vel, illum ex.</p>
-                  <p class="about__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae soluta optio illum ipsa ratione beatae?</p>
-                  <ul class="about__list">
-                    <li class="about__list-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="about__list-item">Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                    <li class="about__list-item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-                    <li class="about__list-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="about__list-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                  </ul>
+                  <h2 class="about__item-title">Skills</h2>
+                  <div class="about__item-images">
+                    <div class="about__item-image"><img src="img/about/html5-icon.png" alt="html5 icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/css3-icon.png" alt="css3 icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/js-icon.png" alt="javascript icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/jquery-icon.png" alt="jquery icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/sass-icon.png" alt="sass icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/gulp-icon.png" alt="gulp icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/vscode-icon.png" alt="visual studio code icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/git-icon.png" alt="git icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/github-icon.png" alt="github icon" class="about__item-img"></div>
+                    <div class="about__item-image"><img src="img/about/figma-icon.png" alt="figma icon" class="about__item-img"></div>
+                  </div>
                 </div>
-              </div>
-            </div>
-           </section>
-           <section class='skills' id="skills">
-            <div class="container">
-              <h2 class="skills__title">Skills</h2>
-              <div class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
-              <div class="skills__slider">
-                <div class="skills__slide"><img src="img/skills/html5-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/css3-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/js-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/jquery-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/sass-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/gulp-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/vscode-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/git-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/github-icon.png" alt="" class="skills__slide-image"></div>
-                <div class="skills__slide"><img src="img/skills/figma-icon.png" alt="" class="skills__slide-image"></div>
-                <!-- <div class="skills__slide"><img src="img/skills/photoshop-icon.png" alt="" class="skills__slide-image"></div> -->
               </div>
             </div>
            </section>
@@ -132,55 +109,72 @@
             <div class="container">
               <h2 class="projects__title">Projects</h2>
                 <div class="projects__text">Some of my latest work</div>
+                <div class="projects__items">
+                  <a href="https://serezha3179.github.io/Ladesign" class="projects__link">
+                    <img src="img/projects/ladesign.png" alt="hall with table and sofa" class="projects__image">
+                  </a>
+                  <a href="https://serezha3179.github.io/Repair" class="projects__link">
+                    <img src="img/projects/repear.png" alt="handyman fixing washing machine" class="projects__image">
+                  </a>
+                  <a href="index.html" class="projects__link">
+                    <img src="img/projects/project.png" alt="computer and cup" class="projects__image">
+                  </a>
+                  <a href="index.html" class="projects__link">
+                    <img src="img/projects/project.png" alt="computer and cup" class="projects__image">
+                  </a>
+                  <a href="index.html" class="projects__link">
+                    <img src="img/projects/project.png" alt="computer and cup" class="projects__image">
+                  </a>
+                  <a href="index.html" class="projects__link">
+                    <img src="img/projects/project.png" alt="computer and cup" class="projects__image">
+                  </a>
+                </div>
+            </div>
+           </section>
+           <section class="contacts" id="contacts">
+            <div class="container">
+              <h2 class="contacts__title">Get In Touch</h2>
+              <div class="contacts__text">Want to work together or have any questions?</div>
+              <div class="contacts__items">
+                <div class="contacts__item">
+                  <h3 class="contacts__item-title">Send me a message</h3>
+                  <div class="contacts__item-text">sergeriabramkin.79@gmail.com</div>
+                  <div class="contacts__social social ">
+                    <a href="https://github.com/serezha3179" class="social__link">
+                      <svg class="social__svg">
+                        <use xlink:href="img/sprite.svg#github"></use>
+                      </svg>
+                    </a>
+                    <a href="https://facebook.com/" class="social__link">
+                      <svg class="social__svg">
+                        <use xlink:href="img/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                    <a href="https://linkedin.com/" class="social__link">
+                      <svg class="social__svg">
+                        <use xlink:href="img/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <form action="" class="contacts__form">
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="name" class="contacts__form-input" placeholder="Enter your name">
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" class="contacts__form-input" placeholder="Enter your email">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" class="contacts__form-textarea" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                    <button type="submit" class="contacts__form-button">Send</button>
+                  </form>
+                </div>
+              </div>
             </div>
            </section>
       </main>
-      <footer id="contacts" class="footer">
+      <footer class="footer">
     <div class="container">
-      <div class="footer__title">Get In Touch</div>
-      <div class="footer__text">Want to work together or have any questions?</div>
-      <div class="footer__items">
-        <div class="footer__item">
-          <h3 class="footer__item-title">Send me a message</h3>
-          <div class="footer__item-text">sergeriabramkin.79@gmail.com</div>
-          <div class="footer__social social ">
-            <a href="https://github.com/" class="social__link">
-              <svg class="social__svg">
-                <use xlink:href="img/sprite.svg#github"></use>
-              </svg>
-            </a>
-            <!-- <a href="https://twitter.com/" class="social__link">
-              <svg class="social__svg">
-                <use xlink:href="img/sprite.svg#twitter"></use>
-              </svg>
-            </a> -->
-            <a href="https://facebook.com/" class="social__link">
-              <svg class="social__svg">
-                <use xlink:href="img/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-            <!-- <a href="https://instagram.com/" class="social__link">
-              <svg class="social__svg">
-                <use xlink:href="img/sprite.svg#instagram"></use>
-              </svg>
-            </a> -->
-            <a href="https://linkedin.com/" class="social__link">
-              <svg class="social__svg">
-                <use xlink:href="img/sprite.svg#linkedin"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer__item">
-          <form action="" class="footer__form">
-            <input type="text" name="" id="" class="footer__form-input" placeholder="Full name">
-            <input type="email" name="" id="" class="footer__form-input" placeholder="Email">
-            <textarea name="" id="" class="footer__form-textarea" cols="30" rows="10" placeholder="Message"></textarea>
-            <!-- <input type="submit" name="" id="" value="" placeholder="Send"> -->
-            <button type="submit" class="footer__form-button">Send</button>
-          </form>
-        </div>
-      </div>
+      <a href="index.html" class="footer__logo"><span><</span>Folio<span>/></span></a>
       <div class="footer__copyright">
         Copyright © 2016, Made by Sergei Abramkin.
       </div>
